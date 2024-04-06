@@ -13,8 +13,10 @@
         "Tables/Moves/pk_move_methods.sql",
         "Tables/Moves/pk_move_classes.sql",
         "Tables/Moves/pk_move_targets.sql",
+        "Tables/Moves/pk_move_ailments.sql",
 
         "Tables/pk_elements.sql",
+        "Tables/pk_stats.sql",
 
         "Tables/Games/pk_game_generations.sql",
         "Tables/Games/pk_game_regions.sql",

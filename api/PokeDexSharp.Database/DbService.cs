@@ -1,4 +1,4 @@
-﻿namespace PokeDexSharp;
+namespace PokeDexSharp;
 
 using Database.Services;
 using Database.Services.Moves;
@@ -13,13 +13,16 @@ public interface IDbService
     IGameRollup Games { get; }
 
     IElementDbService Elements { get; }
+
+    IStatDbService Stats { get; }
 }
 
 internal class DbService(
     ILanguageDbService language, 
     IMoveRollup move,
     IElementDbService elements,
-    IGameRollup game) : IDbService
+    IGameRollup game,
+    IStatDbService stats) : IDbService
 {
     public ILanguageDbService Languages => language;
 
@@ -28,4 +31,6 @@ internal class DbService(
     public IElementDbService Elements => elements;
 
     public IGameRollup Games => game;
+
+    public IStatDbService Stats => stats;
 }

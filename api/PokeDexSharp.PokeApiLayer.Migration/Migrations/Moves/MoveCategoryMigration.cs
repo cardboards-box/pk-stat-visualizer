@@ -1,4 +1,4 @@
-﻿namespace PokeDexSharp.PokeApiLayer.Migration.Migrations.Moves;
+namespace PokeDexSharp.PokeApiLayer.Migration.Migrations.Moves;
 
 using Models;
 
@@ -15,5 +15,22 @@ internal class MoveCategoryMigration(
             Key = category.Name,
             Name = Common.From(category.Descriptions).ToArray()
         });
+    }
+
+    public override async Task Before()
+    {
+        var unknown = new MoveCategory
+        {
+            Key = MoveCategory.DEFAULT,
+            Name =
+            [
+                new Localization
+                {
+                    Code = "en",
+                    Value = MoveCategory.DEFAULT
+                }
+            ]
+        };
+        await Db.Upsert(unknown);
     }
 }

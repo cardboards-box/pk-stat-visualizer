@@ -1,11 +1,8 @@
-CREATE TABLE IF NOT EXISTS pk_languages (
+CREATE TABLE IF NOT EXISTS pk_move_ailments (
 	id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
 	
 	key TEXT NOT NULL UNIQUE,
 	name pk_localization[] NOT NULL DEFAULT '{}',
-	language_code TEXT NOT NULL,
-	country_code TEXT NOT NULL,
-	official BOOLEAN NOT NULL DEFAULT FALSE,
 	
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,

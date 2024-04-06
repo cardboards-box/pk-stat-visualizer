@@ -20,7 +20,8 @@ public abstract class BaseMigration<TTo, TFrom>(
     /// What needs to be loaded before this migration can occur
     /// </summary>
     /// <remarks>
-    /// By default everything requires <see cref="Language"/>s be loaded first
+    /// By default everything requires <see cref="Language"/>s be loaded first.
+    /// Well technically that isn't true, but it's good if languages are loaded first...
     /// </remarks>
     public virtual Type[] Requires { get; } = [typeof(Language)];
 

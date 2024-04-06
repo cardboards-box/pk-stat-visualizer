@@ -1,4 +1,4 @@
-﻿namespace PokeDexSharp;
+namespace PokeDexSharp;
 
 using PokeApiLayer.Migration;
 using PokeApiLayer.Migration.Migrations;
@@ -15,11 +15,13 @@ public static class DiExtensions
 
             .Transient<IMigration, LanguageMigration>()
             .Transient<IMigration, ElementMigration>()
+            .Transient<IMigration, StatMigration>()
 
             .Transient<IMigration, MoveCategoryMigration>()
             .Transient<IMigration, MoveClassMigration>()
             .Transient<IMigration, MoveMethodMigration>()
             .Transient<IMigration, MoveTargetMigration>()
+            .Transient<IMigration, MoveAilmentMigration>()
 
             .Transient<IMigration, GameGenerationMigration>()
             .Transient<IMigration, GameGroupMapMigration>()

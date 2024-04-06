@@ -1,4 +1,4 @@
-﻿namespace PokeDexSharp.Database.Services.Moves;
+namespace PokeDexSharp.Database.Services.Moves;
 
 public interface IMoveRollup
 {
@@ -9,13 +9,16 @@ public interface IMoveRollup
     IMethodDbService Methods { get; }
 
     ITargetDbService Targets { get; }
+
+    IAilmentDbService Ailments { get; }
 }
 
 internal class MoveRollup(
     ICategoryDbService category,
     IClassDbService classes,
     IMethodDbService methods,
-    ITargetDbService targets) : IMoveRollup
+    ITargetDbService targets,
+    IAilmentDbService ailments) : IMoveRollup
 {
     public ICategoryDbService Categories => category;
 
@@ -24,4 +27,6 @@ internal class MoveRollup(
     public IMethodDbService Methods => methods;
 
     public ITargetDbService Targets => targets;
+
+    public IAilmentDbService Ailments => ailments;
 }

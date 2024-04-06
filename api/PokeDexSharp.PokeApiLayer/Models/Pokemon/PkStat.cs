@@ -1,4 +1,4 @@
-﻿namespace PokeDexSharp.PokeApiLayer;
+namespace PokeDexSharp.PokeApiLayer;
 
 [PkResource("stat/([0-9]{1,})")]
 public class PkStat : PkLocalizedBase
