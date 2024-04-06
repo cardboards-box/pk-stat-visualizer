@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\PokeDexSharp.Database\PokeDexSharp.Database.csproj" />
+		<ProjectReference Include="..\PokeDexSharp.PokeApiLayer\PokeDexSharp.PokeApiLayer.csproj" />
+	</ItemGroup>
+	
+	<ItemGroup>
+		<Compile Include="./../global.cs" />
+	</ItemGroup>
+
+</Project>

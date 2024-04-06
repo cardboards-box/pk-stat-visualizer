@@ -1,0 +1,26 @@
+{
+  "paths": [
+    "extensions.sql",
+
+    "Types/pk_extended_localization.sql",
+    "Types/pk_extended_version_localization.sql",
+    "Types/pk_localization.sql",
+    "Types/pk_version_localization.sql",
+
+    "Tables/pk_languages.sql",
+
+    "Tables/Moves/pk_move_categories.sql",
+    "Tables/Moves/pk_move_methods.sql",
+    "Tables/Moves/pk_move_classes.sql",
+    "Tables/Moves/pk_move_targets.sql",
+
+    "Tables/pk_elements.sql",
+
+    "Tables/Games/pk_game_generations.sql",
+    "Tables/Games/pk_game_regions.sql",
+    "Tables/Games/pk_game_locations.sql",
+    "Tables/Games/pk_games.sql",
+    "Tables/Games/pk_game_groups.sql",
+    "Tables/Games/pk_game_group_maps.sql"
+  ]
+}
