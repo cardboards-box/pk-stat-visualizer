@@ -1,4 +1,4 @@
-﻿namespace PokeDexSharp.PokeApiLayer.Migration;
+namespace PokeDexSharp.PokeApiLayer.Migration;
 
 public interface IMigrationService
 {
@@ -19,7 +19,8 @@ internal class MigrationService(
             .ToList(); 
         var types = all.ToDictionary(t => t.Target); //Create a map between the database type and the migration
         var indexed = new Dictionary<IMigration, int>(); //Keep track of the order of each of the migrations
-        
+
+        //Local method to make the logic easier to read and not nested in a while loop
         void Pass() 
         {
             //Iterate through the migrations and resolve the dependencies
@@ -51,6 +52,7 @@ internal class MigrationService(
                 all.Remove(migration);
             }
         }
+
         //Keep track of the number of iterations incase we hit an infinite loop
         int iteration = 0;
         while (all.Count > 0)
